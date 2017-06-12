@@ -1,0 +1,23 @@
+0.0 r 000000000 2560  // sector 0 on surface 0: read 1 'parallel sector'
+0.0 r 000000512 1024  // sector 0 on surface 1: read 1 'parallel sector'
+0.0 r 000001024 1024  // sector 0 on surface 2: read 1 'parallel sector'
+0.0 r 000001536 1024  // sector 0 on surface 3: read 2 'parallel sectors' (surface 3, track 0, sector 0 + surface 0, track 0, sector 1)
+0.0 r 000002048 1024  // sector 1 on surface 0: read 1 'parallel sector'
+
+0.0 r 000000000 2048  // 4 sectors aligned -> 1 parallel sector
+0.0 r 000000000 2560  // 5 sectors aligned -> 2 parallel sectors (4 + 1)
+0.0 r 000000000 3072  // 6 sectors aligned -> 2 parallel sectors (4 + 2)
+0.0 r 000000000 3584  // 7 sectors aligned -> 2 parallel sectors (4 + 3)
+0.0 r 000000000 4096  // 8 sectors aligned -> 2 parallel sectors (4 + 4)
+0.0 r 000000000 4608  // 9 sectors aligned -> 3 parallel sectors (4 + 4 + 1)
+
+0.0 r 000000000 3072  // 6 sectors aligned -> 2 parallel sectors (4 + 2)
+0.0 r 000000512 3072  // 6 sectors starting on surface 1 -> 2 parallel sectors (3 + 3)
+0.0 r 000001024 3072  // 6 sectors starting on surface 2 -> 2 parallel sectors (2 + 4)
+0.0 r 000001536 3072  // 6 sectors starting on surface 3 -> 3 parallel sectors (1 + 4 + 1)
+0.0 r 000002048 3072  // 6 sectors aligned on surface 0  -> 2 parallel sectors (4 + 2)
+
+0.0 r 008190976 1024   // 1 sector 2 sectors from end of track 0 (surface 2) -> 1 parallel sector
+0.0 r 008190976 1024  // 2 sectors 2 sectors from end of track 0 (surface 2) -> 1 parallel sector
+0.0 r 008190976 3072  // 6 sectors 2 sectors from end of track 0 (surface 2) -> 1 parallel sector (2) + seek to track 1 + 1 parallel sector (4)
+0.0 r 008190976 3584  // 7 sectors 2 sectors from end of track 0 (surface 2) -> 1 parallel sector (2) + seek to track 1 + 2 parallel sectors (4 + 1)

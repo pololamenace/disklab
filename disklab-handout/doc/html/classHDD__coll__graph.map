@@ -1,0 +1,4 @@
+<map id="HDD" name="HDD">
+<area shape="rect" id="node2" href="$classDisk.html" title="base class for disk&#45;based storage devices " alt="" coords="5,5,56,32"/>
+<area shape="rect" id="node3" href="$classBlockCache.html" title="cache for rotating disk&#45;based storage devices (HDD) " alt="" coords="80,5,179,32"/>
+</map>
